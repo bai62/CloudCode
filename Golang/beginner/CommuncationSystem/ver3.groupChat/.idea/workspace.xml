@@ -5,19 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2ebdd48-3428-471d-98a5-018c46e059ba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ver2.broadcast/server" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/ver3.groupChat.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ver4.business encapsulation/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ver4.business encapsulation/server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ver4.business encapsulation/user.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ver4.business encapsulation/ver4.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../awesomeProject/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/../awesomeProject/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../awesomeProject/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/../awesomeProject/user.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ver2.broadcast/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ver2.broadcast/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ver2.broadcast/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/../ver2.broadcast/user.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Go File" />
+        <option value="UML Sequence" />
       </list>
     </option>
   </component>
@@ -47,8 +42,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="DefaultPlantUmlFileTemplate" value="UML Sequence" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -56,27 +53,8 @@
     <property name="go.formatter.settings.were.checked" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.modules.go.list.on.any.changes.was.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ver2.broadcast/server.go" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/../ver2.broadcast/server.go" />
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
-      <module name="ver3.groupChat" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
-      <module name="ver3.groupChat" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="DIRECTORY" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <method v="2" />
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,8 +70,23 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/server.go</url>
+          <line>71</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
