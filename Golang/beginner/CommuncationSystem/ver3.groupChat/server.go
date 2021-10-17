@@ -15,9 +15,10 @@ type Server struct {
 	Message   chan string
 }
 
-func (this*Server)BroadCast(user *User){
-	this.Message<-fmt.Sprintf("%s上线",user.Name)
+func (this*Server)BroadCast(user *User,msg string){
+	this.Message<-user.Name+" "+ msg
 }
+
 
 func (this *Server) Handler(conn net.Conn) {
 	name := conn.RemoteAddr().String()
@@ -27,15 +28,23 @@ func (this *Server) Handler(conn net.Conn) {
 	this.OnlineMap[name]=user
 	this.MapLock.Unlock()
 
-	this.BroadCast(user)
+	this.BroadCast(user,"is online")
 
 	go func() {
 		buf := make([]byte,4096)
 		for{
-			msg,err := conn.Read(buf)
-			if err != nil || err != io.EOF{
-				fmt.Println("conn read err")
+			n, err := conn.Read(buf)
+			if n == 0{
+				this.BroadCast(user,"user is offline")
+				return
 			}
+			if err != nil && err != io.EOF{
+				fmt.Println("conn read err")
+				return
+			}
+
+			msg := string(buf[:n-1])
+			this.BroadCast(user,msg)
 		}
 	}()
 
