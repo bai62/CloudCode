@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+'autonumber'
+
+participant UserListener as ul
+actor user as c
+participant conn #orange
+participant Handler as h
+participant Broadcast as b
+participant ServerListener as sl
+c --> conn : Accepted
+conn->h
+h->c:new user
+h->b : user is online
+h->b : group chat message
+b-->sl:send msg by chan
+sl-->ul:send msg to users by chan
+ul-->conn: write msg into conn
+@enduml

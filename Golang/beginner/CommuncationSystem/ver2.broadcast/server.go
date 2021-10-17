@@ -65,7 +65,7 @@ func (this *Server) Handler(conn net.Conn) {
 	//广播当前用户上线消息
 	this.BroadCast(user, "已上线")
 
-	//当前handler阻塞
+	//当前handler阻塞。如果handler死亡，当前协程结束
 	select {}
 }
 

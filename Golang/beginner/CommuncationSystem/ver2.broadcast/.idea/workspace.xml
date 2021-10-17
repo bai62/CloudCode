@@ -5,9 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1dde18c3-bc69-41e9-86b4-ba17342b3309" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/test.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ver3.groupChat/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ver3.groupChat/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ver3.groupChat/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ver3.groupChat/.idea/ver3.groupChat.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ver3.groupChat/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ver3.groupChat/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ver3.groupChat/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ver3.groupChat/server" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ver3.groupChat/server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ver3.groupChat/user.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/user.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

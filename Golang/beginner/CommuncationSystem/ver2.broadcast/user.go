@@ -21,7 +21,7 @@ func NewUser(conn net.Conn) *User {
 	}
 
 	//启动监听当前user channel消息的goroutine
-	go user.ListenMessage()
+	go user.ListenMessage() //通过channel监听msg,需要开启异步
 
 	return user
 }
