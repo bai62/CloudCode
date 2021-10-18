@@ -5,6 +5,7 @@ import (
 	"io"
 	"net"
 	"sync"
+	"time"
 )
 
 type Server struct {
@@ -15,34 +16,44 @@ type Server struct {
 	Message   chan string
 }
 
-func (this*Server)BroadCast(user *User,msg string){
-	this.Message<-user.Name+" "+ msg
+func (this *Server) BroadCast(user *User, msg string) {
+	this.Message <- user.Name + " : " + msg
 }
-
 
 func (this *Server) Handler(conn net.Conn) {
 
-	user := NewUser(conn,this)
+	user := NewUser(conn, this)
 	user.Online()
 
-	go func() {//异步，接收客户端消息
-		buf := make([]byte,4096)
-		for{
+	isAlive := make(chan bool)
+
+	go func() { //异步，接收客户端消息
+		buf := make([]byte, 4096)
+		for {
 			n, err := conn.Read(buf)
-			if n == 0{
+			if n == 0 {
 				user.Offline()
 				return
 			}
-			if err != nil && err != io.EOF{
+			if err != nil && err != io.EOF {
 				fmt.Println("conn read err")
 				return
 			}
 			msg := string(buf[:n-1])
 			user.DoMessage(msg)
+			isAlive <- true
 
 		}
 	}()
-	select{}
+	for {
+		select {
+		case <-isAlive:
+		case <-time.After(time.Second*10):
+			user.SendMsg("you're kicked off")
+			close(user.C)
+			conn.Close()
+		}
+	}
 }
 
 func (this *Server) ServerListen() {
